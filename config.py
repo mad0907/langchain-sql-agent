@@ -1,0 +1,10 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+GOOGLE_PROJECT_ID = os.getenv("GOOGLE_PROJECT_ID")
+BIGQUERY_DATASET = os.getenv("BIGQUERY_DATASET")
+BIGQUERY_TABLE = os.getenv("BIGQUERY_TABLE")
+
+FULL_TABLE_ID = f"{GOOGLE_PROJECT_ID}.{BIGQUERY_DATASET}.{BIGQUERY_TABLE}"
